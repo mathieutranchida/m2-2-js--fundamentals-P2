@@ -7,11 +7,17 @@
 // -----------------------------------------------------------------
 function countBs(str) {
   // str is a string
+  const majB = str.split("");
+  let total = 0;
+  majB.forEach(function (x) {
+    if (x === "B") total++;
+  });
+  return total;
 }
 // -----------------------------------------------------------------
 // Edit only the code between the lines (above)
 
 // Create more test cases.
-
+console.log(countBs("Hello my name is Bea or Bob, I don't remember."));
 // This is needed for automated testing (more on that later)
 module.exports = countBs;

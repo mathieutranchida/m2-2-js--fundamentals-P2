@@ -9,6 +9,9 @@
 // -----------------------------------------------------------------
 function greet(list) {
   // list is an array of strings
+  return list.map(function (x) {
+    return "Hello " + x;
+  });
 }
 // -----------------------------------------------------------------
 // Edit only the code between the lines (above)

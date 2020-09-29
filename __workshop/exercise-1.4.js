@@ -17,6 +17,13 @@
 // -----------------------------------------------------------------
 function removeMiddleName(string) {
   // complete the function
+  const arr = string.split(" ");
+  if (arr.length <= 2) {
+    return string;
+  } else {
+    const fullName = arr[0] + " " + arr[arr.length - 1];
+    return fullName;
+  }
 }
 // -----------------------------------------------------------------
 // Edit only the code between the lines (above)
@@ -25,7 +32,7 @@ function removeMiddleName(string) {
 //
 
 // Call the function to test your code.
-console.log(removeMiddleName("Morty Antoine Smith"));
+console.log(removeMiddleName("Morty Antoine Mathieu Smith"));
 
 // Create more test examples.
 

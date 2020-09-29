@@ -14,7 +14,19 @@
 // -----------------------------------------------------------------
 function getLetterGrade(grades) {
   // grades is an array of numbers
+  let total =
+    grades.reduce(function (a, b) {
+      return a + b;
+    }) / grades.length;
+  let grade = "";
+  if (total >= 90) grade = "A";
+  if (total < 90) grade = "B";
+  if (total < 80) grade = "C";
+  if (total < 70) grade = "D";
+  if (total < 60) grade = "F";
+  return grade;
 }
+
 // -----------------------------------------------------------------
 // Edit only the code between the lines (above)
 

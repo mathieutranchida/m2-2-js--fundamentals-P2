@@ -9,6 +9,10 @@
 // -----------------------------------------------------------------
 function keepLong(list) {
   // list is an array of strings
+  const long = list.filter(function (x) {
+    return x.length > 5;
+  });
+  return long;
 }
 // -----------------------------------------------------------------
 // Edit only the code between the lines (above)
@@ -18,6 +22,29 @@ console.log(
 );
 
 // Create more test cases.
-
+console.log(
+  keepLong([
+    "Cyborg",
+    "Robin",
+    "Batman",
+    "Superman",
+    "Aquaman",
+    "Flash",
+    "Climbing",
+    "Photography",
+  ])
+);
+console.log(
+  keepLong([
+    "Cyborg",
+    "Robin",
+    "Batman",
+    "Superman",
+    "Aquaman",
+    "Flash",
+    "Quick",
+    "yes",
+  ])
+);
 // This is needed for automated testing (more on that later)
 module.exports = keepLong;
